@@ -18,9 +18,9 @@
               class="download-badge" /></a>
         </div>
       </div>
-      <img src="../assets/hero-image.svg" id="hero-image" alt="" />
+      <img src="../assets/hero-image.svg" id="hero-image" alt="" class="section-image"/>
     </section>
-    <section class="feature-section">
+    <section class="feature-section" id="features1">
       <div class="feature-icon">
         <img src="../assets/match-icon.png" alt="match" />
         <div class="col">
@@ -39,7 +39,7 @@
         </div>
         <div class="feature-image-content">
           <div class="feature-background"></div>
-          <img src="../assets/movkup1.png" alt="" />
+          <img src="../assets/movkup1.png" alt="" class="section-image mockup-image"/>
         </div>
       </article>
     </section>
@@ -62,7 +62,7 @@
         </div>
         <div class="feature-image-content">
           <div class="feature-background"></div>
-          <img src="../assets/moclup2.png" alt="" />
+          <img src="../assets/moclup2.png" alt="" class="section-image mockup-image"/>
         </div>
       </article>
     </section>
@@ -85,7 +85,7 @@
         </div>
         <div class="feature-image-content">
           <div class="feature-background"></div>
-          <img src="../assets/mockup3.png" alt="" />
+          <img src="../assets/mockup3.png" alt="" class="section-image mockup-image"/>
         </div>
       </article>
     </section>
@@ -215,7 +215,7 @@ section {
   border-radius: 10em;
 }
 
-.feature-image-content img {
+.mockup-image {
   width: 20vw;
   height: 75vh;
 }
@@ -224,6 +224,39 @@ article {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+@media only screen and (max-width:768px) {
+  article{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  #hero{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 5em;
+  }
+  #hero-image{
+    width: 80vw;
+  }
+  .mockup-image{
+    width: 80vw;
+    height: 60vh;
+  }
+  .feature-background{
+    width: 80vw;
+  }
+  .feature-text{
+    margin: 1em 0;
+  }
+  section{
+    margin: 2em 0;
+    font-size: smaller;
+  }
+  .feature-image-content{
+    margin-left: 0;
+  }
 }
 
 .feature-description {

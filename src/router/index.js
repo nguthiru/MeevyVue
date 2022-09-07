@@ -1,11 +1,16 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import Home from '../views/Home.vue'
-
+import PrivacyPolicy from '../views/Privacy.vue'
 const routes = [
   {
     path: '/',
     name: 'Home',
     component: Home
+  },
+  {
+    path: '/support/privacy',
+    name: 'Privacy',
+    component: PrivacyPolicy
   },
   {
     path: '/about',
