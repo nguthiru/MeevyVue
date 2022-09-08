@@ -4,7 +4,7 @@
             <img src="../assets/logo.png" alt="Meevy" id="home-logo" />
         </router-link>
         <ul class="nav-links row">
-            <a href="#features1" id="features-link">
+            <a href="#" id="features-link">
                 <li class="nav-link">Features</li>
             </a>
             <a href="#">
@@ -18,9 +18,10 @@
                             <i class="fa-solid fa-chevron-down"></i>
                         </div>
                         <div class="dropdown-items col" v-show="supportDrop">
-                            <a href="#">FAQ</a>
-                            <router-link to="support/privacy">Privacy Policy</router-link>
-                            <a href="#">Terms & Conditions</a>
+                            
+                            <router-link to="/support/privacy">Privacy Policy</router-link>
+                            <router-link to="/support/terms">Terms & Conditions</router-link>
+                           
                         </div>
                     </div>
                 </li>
@@ -120,13 +121,18 @@ header ul .nav-link {
 .dropdown-items {
     position: absolute;
     top: 1.5em;
+    background-color: white;
+    padding: 1em;
+    border-radius: 10px;
 }
 
 .col {
     flex-direction: column;
     display: flex;
 }
-
+a:hover{
+    font-size: 1.05em;
+}
 .dropdown-items a {
     margin: 0.5em 0;
 

@@ -102,7 +102,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 section {
   scroll-snap-align: start;
   margin-top: 1em;
