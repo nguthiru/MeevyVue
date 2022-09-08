@@ -235,7 +235,7 @@ article {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-top: 5em;
+    margin-top: 10vh;
   }
   #hero-image{
     width: 80vw;

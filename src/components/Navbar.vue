@@ -1,14 +1,16 @@
 <template>
     <header class="row align-center">
         <router-link to="/">
-            <img src="../assets/logo.png" alt="Meevy" id="home-logo" />
+            <img src="../assets/logo.png" alt="Meevy" id="home-logo" class='nav-logo'/>
+            <img src="../assets/logo_small.png" alt="Meevy" id="home-logo-mobile" />
         </router-link>
+        
         <ul class="nav-links row">
             
-                <li class="nav-link"> <router-link to="/support/privacy">Privacy Policy</router-link></li>
+                <li class="nav-link"> <router-link to="/support/privacy">Your Privacy</router-link></li>
             
             <a href="#">
-                <li class="nav-link"><router-link to="/support/terms">Terms & Conditions</router-link></li>
+                <li class="nav-link"><router-link to="/support/terms">Terms Of Use</router-link></li>
             </a>
             <!-- <a href="#">
                 <li class="nav-link">
@@ -60,6 +62,9 @@ export default {
     width: 6em;
     height: 2em;
 }
+#home-logo-mobile{
+    display: none;
+}
 
 header {
     padding: 1em;
@@ -79,7 +84,13 @@ button {
     header {
         font-size: small;
     }
-
+    #home-logo{
+        display: none;
+    }
+    #home-logo-mobile{
+        display: block;
+        height: 1.5em;
+    }
     #features-link {
         display: none;
     }
