@@ -4,13 +4,13 @@
             <img src="../assets/logo.png" alt="Meevy" id="home-logo" />
         </router-link>
         <ul class="nav-links row">
-            <a href="#" id="features-link">
-                <li class="nav-link">Features</li>
-            </a>
+            
+                <li class="nav-link"> <router-link to="/support/privacy">Privacy Policy</router-link></li>
+            
             <a href="#">
-                <li class="nav-link">Download</li>
+                <li class="nav-link"><router-link to="/support/terms">Terms & Conditions</router-link></li>
             </a>
-            <a href="#">
+            <!-- <a href="#">
                 <li class="nav-link">
                     <div class="dropdown col">
                         <div class="row" @click="supportDrop=!supportDrop">
@@ -25,7 +25,7 @@
                         </div>
                     </div>
                 </li>
-            </a>
+            </a> -->
         </ul>
         <WaitlistModal v-if="waitlistOpen" @close='waitlistOpen=false' @wheel.prevent @touchmove.prevent
             @scroll.prevent />
@@ -136,5 +136,18 @@ a:hover{
 .dropdown-items a {
     margin: 0.5em 0;
 
+}
+.router-link-active{
+    font-weight: 600;
+    display: block;
+}
+.router-link-active::after{
+    content: '';
+    display: block;
+    width: 20px;
+    height: 5px;
+    background-color: black;
+    margin: 0 auto;
+    border-radius: 10px;
 }
 </style>

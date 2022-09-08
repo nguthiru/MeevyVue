@@ -5,19 +5,19 @@
                 <i class="fa fa-clock"></i>
                 <h3>Join Waitlist</h3>
             </div>
-            
+            <p>{{submitStatus}}</p>
             <div id="waitlist-form">
                 <div class="form-container">
                     <label for="Email">Email Address</label>
-                    <input type="email" placeholder="Your Email Address">
+                    <input type="email" placeholder="Your Email Address" v-model="email">
                 </div>
                 <div class="form-container">
                     <label for="Expectations">What do you expect</label>
-                    <input type="text" placeholder="Tell us what you expect">
+                    <input type="text" placeholder="Tell us what you expect" v-model="info">
                 </div>
             </div>
             <p class="caption">*We will email you in regards to your application</p>
-            <button>
+            <button @click="submit">
                 <div class="row">
                     <i class="fa fa-inbox"></i>
                     <p>Join Waitlist</p>
@@ -29,10 +29,31 @@
 
 <script>
     import ModalVue from './base/Modal.vue';
+    import axios from 'axios'
     export default {
         name: 'waitlist-modal',
         components:{
             ModalVue
+        },
+        data(){
+            return {
+                email: null,
+                info: null,
+                submitStatus:""
+            }
+        },
+        methods:{
+            async submit(){
+                if(this.email!=null && this.info!=null){
+                var res = await axios.post("https://souldate.herokuapp.com/public/waitlist/join/",{email:this.email,info:this.info})
+                console.log(res.data)
+                this.$emit('close');
+
+            }
+                else{
+                    this.submitStatus = "Kindly fill all fields."
+                }
+            }
         }
     }
 </script>
